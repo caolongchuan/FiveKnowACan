@@ -5,12 +5,19 @@ import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fiveknowacan.MainActivity;
 import com.example.fiveknowacan.base.BaseDeviceDetialPager;
 import com.example.fiveknowacan.base.BasePager;
 import com.example.fiveknowacan.bean.DeviceClassifiBean;
 import com.example.fiveknowacan.fragment.LeftMenuFragment;
+import com.example.fiveknowacan.global.GlobalConstants;
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+import com.lidroid.xutils.http.client.HttpRequest;
 
 import java.util.ArrayList;
 
@@ -56,7 +63,7 @@ public class DevicePager extends BasePager {
         flContent.addView(view);
 */
 
-
+        getDataFromServer();
     }
 
     //临时用 假数据
@@ -96,6 +103,38 @@ public class DevicePager extends BasePager {
 
     }
 
+    /**
+     * 从服务器获取数据 需要权限:<uses-permission android:name="android.permission.INTERNET"
+     * />
+     */
+    private void getDataFromServer() {
+        HttpUtils utils = new HttpUtils();
+        utils.send(HttpRequest.HttpMethod.GET, GlobalConstants.CATEGORY_URL,
+                new RequestCallBack<String>() {
+
+                    @Override
+                    public void onSuccess(ResponseInfo<String> responseInfo) {
+                        // 请求成功
+                        String result = responseInfo.result;// 获取服务器返回结果
+                        System.out.println("服务器返回结果:" + result);
+
+                        // JsonObject, Gson
+//                        processData(result);
+
+                        // 写缓存
+//                        CacheUtils.setCache(GlobalConstants.CATEGORY_URL,
+//                                result, mActivity);
+                    }
+
+                    @Override
+                    public void onFailure(HttpException error, String msg) {
+                        // 请求失败
+                        error.printStackTrace();
+                        Toast.makeText(mActivity, msg, Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                });
+    }
 
 
 }
