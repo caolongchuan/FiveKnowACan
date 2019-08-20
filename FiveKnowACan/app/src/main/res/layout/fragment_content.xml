@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.example.fiveknowacan.view.NoScrollViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bottom_tab_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_detial"
+            style="@style/Bottom_Tab_Style"
+            android:drawableTop="@drawable/tab_detial_selector"
+            android:checked="true"
+            android:text="物资详情" />
+
+        <RadioButton
+            android:id="@+id/rb_my"
+            style="@style/Bottom_Tab_Style"
+            android:drawableTop="@drawable/tab_my_selector"
+            android:text="我的" />
+
+    </RadioGroup>
+
+</LinearLayout>
