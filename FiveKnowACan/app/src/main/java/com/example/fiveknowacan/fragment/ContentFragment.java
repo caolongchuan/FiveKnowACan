@@ -10,8 +10,8 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.fiveknowacan.MainActivity;
 import com.example.fiveknowacan.R;
 import com.example.fiveknowacan.base.BasePager;
-import com.example.fiveknowacan.page.HomePager;
-import com.example.fiveknowacan.page.NewsCenterPager;
+import com.example.fiveknowacan.page.DevicePager;
+import com.example.fiveknowacan.page.MyPager;
 import com.example.fiveknowacan.view.NoScrollViewPager;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -42,9 +42,9 @@ public class ContentFragment extends BaseFragment {
     public void initData() {
         mPagers = new ArrayList<BasePager>();
 
-        // 添加五个标签页
-        mPagers.add(new HomePager(mActivity));
-        mPagers.add(new NewsCenterPager(mActivity));
+        // 添加2个标签页
+        mPagers.add(new DevicePager(mActivity));
+        mPagers.add(new MyPager(mActivity));
 
         mViewPager.setAdapter(new ContentAdapter());
 
@@ -77,8 +77,8 @@ public class ContentFragment extends BaseFragment {
                 BasePager pager = mPagers.get(position);
                 pager.initData();
 
-                if (position == 0 || position == mPagers.size() - 1) {
-                    // 首页和设置页要禁用侧边栏
+                if ( position == mPagers.size() - 1) {
+                    // 我的页面要禁用侧边栏
                     setSlidingMenuEnable(false);
                 } else {
                     // 其他页面开启侧边栏
@@ -100,8 +100,8 @@ public class ContentFragment extends BaseFragment {
 
         // 手动加载第一页数据
         mPagers.get(0).initData();
-        // 首页禁用侧边栏
-        setSlidingMenuEnable(false);
+        // 设备页面开启侧边栏
+        setSlidingMenuEnable(true);
     }
 
     /**
@@ -152,9 +152,15 @@ public class ContentFragment extends BaseFragment {
 
     }
 
-    // 获取新闻中心页面
-    public NewsCenterPager getNewsCenterPager() {
-        NewsCenterPager pager = (NewsCenterPager) mPagers.get(1);
+    //获取设备列表页面
+    public DevicePager getDeviceListPager(){
+        DevicePager pager = (DevicePager) mPagers.get(0);
+        return pager;
+    }
+
+    // 获取我的页面
+    public MyPager getNewsCenterPager() {
+        MyPager pager = (MyPager) mPagers.get(1);
         return pager;
     }
 

@@ -18,17 +18,17 @@ import java.util.ArrayList;
  * @author cao
  * @date 2019-8-20
  */
-public class NewsCenterPager extends BasePager {
-    public NewsCenterPager(Activity activity) {
+public class MyPager extends BasePager {
+    public MyPager(Activity activity) {
         super(activity);
     }
     @Override
     public void initData() {
-        System.out.println("首页初始化啦...");
+        System.out.println("我的初始化啦...");
 
         // 要给帧布局填充布局对象
         TextView view = new TextView(mActivity);
-        view.setText("首页");
+        view.setText("我的");
         view.setTextColor(Color.RED);
         view.setTextSize(22);
         view.setGravity(Gravity.CENTER);
@@ -36,7 +36,7 @@ public class NewsCenterPager extends BasePager {
         flContent.addView(view);
 
         // 修改页面标题
-        tvTitle.setText("智慧北京");
+        tvTitle.setText("我的");
 
         // 隐藏菜单按钮
         btnMenu.setVisibility(View.GONE);
@@ -46,7 +46,7 @@ public class NewsCenterPager extends BasePager {
 //    private ArrayList<BaseMenuDetailPager> mMenuDetailPagers;// 菜单详情页集合
     private NewsMenu mNewsData;// 分类信息网络数据
 
-    public NewsCenterPager(Activity activity) {
+    public MyPager(Activity activity) {
         super(activity);
     }
 
