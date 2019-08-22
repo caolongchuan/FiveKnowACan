@@ -39,4 +39,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha02'
     //    implementation 'com.android.support:support-v4:28.0.0'
     implementation files('libs/xUtils-2.6.14.jar')
+    implementation files('libs/sun.misc.BASE64Decoder.jar')
 }

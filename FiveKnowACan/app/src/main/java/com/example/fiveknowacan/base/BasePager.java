@@ -6,7 +6,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.fiveknowacan.MainActivity;
+import com.example.fiveknowacan.activity.MainActivity;
 import com.example.fiveknowacan.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 

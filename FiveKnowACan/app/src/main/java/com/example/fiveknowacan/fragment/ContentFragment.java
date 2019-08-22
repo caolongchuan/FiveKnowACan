@@ -7,7 +7,7 @@ import android.widget.RadioGroup;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.fiveknowacan.MainActivity;
+import com.example.fiveknowacan.activity.MainActivity;
 import com.example.fiveknowacan.R;
 import com.example.fiveknowacan.base.BasePager;
 import com.example.fiveknowacan.page.DevicePager;
@@ -28,7 +28,7 @@ public class ContentFragment extends BaseFragment {
     private NoScrollViewPager mViewPager;
     private RadioGroup rgGroup;
 
-    private ArrayList<BasePager> mPagers;// 五个标签页的集合
+    private ArrayList<BasePager> mPagers;// 两个标签页的集合
 
     @Override
     public View initView() {

@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.fiveknowacan.MainActivity;
+import com.example.fiveknowacan.activity.MainActivity;
 import com.example.fiveknowacan.R;
 import com.example.fiveknowacan.bean.DeviceClassifiBean;
 import com.example.fiveknowacan.page.MyPager;

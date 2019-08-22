@@ -1,13 +1,10 @@
 package com.example.fiveknowacan.page;
 
 import android.app.Activity;
-import android.graphics.Color;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.fiveknowacan.MainActivity;
+import com.example.fiveknowacan.activity.MainActivity;
 import com.example.fiveknowacan.base.BaseDeviceDetialPager;
 import com.example.fiveknowacan.base.BasePager;
 import com.example.fiveknowacan.bean.DeviceClassifiBean;

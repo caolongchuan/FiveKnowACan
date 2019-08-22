@@ -21,5 +21,60 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="Theme_Light_LoadingDialog"></style>
+
+
+    <style name="PersonTextStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingRight">@dimen/dp_20</item>
+        <item name="android:paddingLeft">@dimen/margin_16dp</item>
+        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:textSize">@dimen/dp_14</item>
+        <item name="android:drawableRight">@mipmap/right_arrow</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:checkable">true</item>
+    </style>
+
+    <style name="inputEditStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">96px</item>
+        <item name="android:layout_marginLeft">@dimen/margin_16dp</item>
+        <item name="android:layout_marginRight">@dimen/margin_16dp</item>
+        <item name="android:layout_marginTop">@dimen/margin_16dp</item>
+        <item name="android:background">@drawable/white_shape</item>
+        <item name="android:padding">20px</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColorHint">#ffd2d2d2</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:drawablePadding">@dimen/margin_8dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:theme">@style/ButtonTheme</item>
+    </style>
+    <style name="ButtonTheme">
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="colorControlHighlight">#1296db</item>
+    </style>
+
+    <style name="TextStyles">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingRight">@dimen/margin_8dp</item>
+        <item name="android:paddingLeft">@dimen/margin_8dp</item>
+        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:checkable">true</item>
+    </style>
+
 
 </resources>
