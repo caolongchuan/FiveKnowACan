@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DeviceActivity">
+    <ScrollView
+        android:id="@+id/sv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_device"
+                android:layout_width="@dimen/dp_300"
+                android:layout_height="@dimen/dp_200"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/news_pic_default" />
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_device"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/tv_nam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="名称:"
+                    android:textSize="@dimen/dp_20" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:text="消防斧"
+                    android:textSize="@dimen/dp_20" />
+
+                <TextView
+                    android:id="@+id/tv_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_60"
+                    android:text="库存数量:"
+                    android:textSize="@dimen/dp_20" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:text="20"
+                    android:textSize="@dimen/dp_20" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_name"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备型号："
+                    android:textSize="@dimen/dp_20" />
+
+                <TextView
+                    android:id="@+id/tv_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sos-9001"
+                    android:textSize="@dimen/dp_20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_constitute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_model"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备组成："
+                    android:textSize="@dimen/dp_20" />
+
+                <TextView
+                    android:id="@+id/tv_constitute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="斧头 、斧柄、斧头 、斧柄"
+                    android:textSize="@dimen/dp_20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_parameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_constitute"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="技术参数："
+                    android:textSize="@dimen/dp_20" />
+
+                <TextView
+                    android:id="@+id/tv_parameter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等"
+                    android:textSize="@dimen/dp_20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_parameter"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="维护保养："
+                    android:textSize="@dimen/dp_20" />
+
+                <TextView
+                    android:id="@+id/tv_maintain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等"
+                    android:textSize="@dimen/dp_20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_modelofuse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_maintain"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用规程："
+                    android:textSize="@dimen/dp_20" />
+
+                <TextView
+                    android:id="@+id/tv_methodofuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等等"
+                    android:textSize="@dimen/dp_20" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_below="@+id/ll_modelofuse"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_width="fill_parent"
+                android:layout_height="80px"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/back_login_tijiao"
+                android:gravity="center"
+                android:text="播放视频"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_vadiolist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_modelofuse"
+                android:layout_marginTop="@dimen/dp_20"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视频列表："
+                    android:textSize="@dimen/dp_20" />
+
+                <ListView
+                    android:id="@+id/lv_vadiolist"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

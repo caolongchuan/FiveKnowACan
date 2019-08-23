@@ -1,14 +1,18 @@
 package com.example.fiveknowacan.page;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.fiveknowacan.R;
+import com.example.fiveknowacan.activity.ChangePasswordActivity;
+import com.example.fiveknowacan.activity.DeviceActivity;
 import com.example.fiveknowacan.base.BaseDeviceDetialPager;
 import com.example.fiveknowacan.bean.DeviceBean;
 
@@ -38,6 +42,13 @@ class AllDeviceDetailPager extends BaseDeviceDetialPager {
                 null);
 //        ViewUtils.inject(this, view);
         m_lvDeviceList = view.findViewById(R.id.lv_devicelist);
+        m_lvDeviceList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                mActivity.startActivity(new Intent(mActivity, DeviceActivity.class));
+
+            }
+        });
         return view;
     }
 
