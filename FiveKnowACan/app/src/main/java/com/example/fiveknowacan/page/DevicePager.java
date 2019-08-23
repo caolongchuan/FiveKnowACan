@@ -43,6 +43,8 @@ public class DevicePager extends BasePager {
         tvTitle.setText("设备列表");
         // 显示菜单按钮
         btnMenu.setVisibility(View.VISIBLE);
+        //将搜素与扫描按钮显示出来
+        llSearchScanning.setVisibility(View.VISIBLE);
         // 获取侧边栏对象
         MainActivity mainUI = (MainActivity) mActivity;
         LeftMenuFragment fragment = mainUI.getLeftMenuFragment();

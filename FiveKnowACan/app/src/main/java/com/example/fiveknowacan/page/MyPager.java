@@ -1,5 +1,6 @@
 package com.example.fiveknowacan.page;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -31,8 +32,11 @@ public class MyPager extends BasePager {
     private LinearLayout ll_FamilyAbout;
     private Button btn_Exit;
 
+    @SuppressLint("ResourceAsColor")
     public MyPager(Activity activity) {
         super(activity);
+        // 隐藏菜单按钮
+        rlMyActionBar.setVisibility(View.GONE);
     }
     @Override
     public void initData() {
@@ -45,10 +49,6 @@ public class MyPager extends BasePager {
         initEvent();
         flContent.addView(view);
 
-        // 修改页面标题
-        tvTitle.setText("我的");
-        // 隐藏菜单按钮
-        btnMenu.setVisibility(View.GONE);
     }
 
     //初始化点击事件

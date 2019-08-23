@@ -86,7 +86,7 @@
 
 
     <!--我的页面布局需要的颜色-->
-    <color name="title_color">#CC0628</color>
+    <color name="title_color">#2B83C7</color>
     <color name="background_color">#f6f6f6</color>
     <color name="about_background_color">#EEEEEE</color>
 </resources>

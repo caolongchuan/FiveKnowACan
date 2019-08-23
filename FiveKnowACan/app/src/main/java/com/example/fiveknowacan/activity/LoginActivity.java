@@ -206,9 +206,9 @@ public class LoginActivity extends Activity
                 setLoginBtnClickable(false);//点击登录后，设置登录按钮不可点击状态
 
 
-                //睡眠3秒
+                //睡眠2秒
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -332,7 +332,8 @@ public class LoginActivity extends Activity
         if (mLoadingDialog == null) {
             mLoadingDialog = new LoadingDialog(this, getString(R.string.loading), false);
         }
-        mLoadingDialog.show();
+//        mLoadingDialog.show();
+        mLoadingDialog.showButtom();
     }
 
 
