@@ -30,7 +30,6 @@ class AllDeviceDetailPager extends BaseDeviceDetialPager {
     ListView m_lvDeviceList;
     DeviceAdapter m_Adapter;
 
-
     public AllDeviceDetailPager(Activity mActivity) {
         super(mActivity);
     }
@@ -123,16 +122,6 @@ class AllDeviceDetailPager extends BaseDeviceDetialPager {
             DeviceBean b = getItem(position);
             holder.tvTitle.setText(b.name);
             holder.tvDate.setText(b.use);
-
-//            // 根据本地记录来标记已读未读
-//            String readIds = PrefUtils.getString(mActivity, "read_ids", "");
-//            if (readIds.contains(news.id + "")) {
-//                holder.tvTitle.setTextColor(Color.GRAY);
-//            } else {
-//                holder.tvTitle.setTextColor(Color.BLACK);
-//            }
-
-//            mBitmapUtils.display(holder.ivIcon, news.listimage);
 
             return convertView;
         }

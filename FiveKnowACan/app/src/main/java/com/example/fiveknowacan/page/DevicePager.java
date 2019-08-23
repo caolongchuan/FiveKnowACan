@@ -1,15 +1,24 @@
 package com.example.fiveknowacan.page;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.Instrumentation;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.example.fiveknowacan.activity.MainActivity;
+import com.example.fiveknowacan.activity.StartScanActivity;
 import com.example.fiveknowacan.base.BaseDeviceDetialPager;
 import com.example.fiveknowacan.base.BasePager;
 import com.example.fiveknowacan.bean.DeviceClassifiBean;
 import com.example.fiveknowacan.fragment.LeftMenuFragment;
 import com.example.fiveknowacan.global.GlobalConstants;
+import com.example.fiveknowacan.zxing.android.CaptureActivity;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
@@ -35,6 +44,19 @@ public class DevicePager extends BasePager {
         super(activity);
         //先给点假数据
         initDeviceClassifi();
+
+        initEvent();
+    }
+
+    private void initEvent() {
+        //点击扫描按钮
+        btnScanning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mActivity, StartScanActivity.class);
+                mActivity.startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -89,4 +89,12 @@
     <color name="title_color">#2B83C7</color>
     <color name="background_color">#f6f6f6</color>
     <color name="about_background_color">#EEEEEE</color>
+
+    <!--扫描功能用到的颜色-->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="status_text">#ffffffff</color>
+
 </resources>
