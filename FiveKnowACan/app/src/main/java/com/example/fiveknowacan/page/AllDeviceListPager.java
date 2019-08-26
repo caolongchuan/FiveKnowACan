@@ -11,26 +11,25 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.fiveknowacan.R;
-import com.example.fiveknowacan.activity.ChangePasswordActivity;
-import com.example.fiveknowacan.activity.DeviceActivity;
+import com.example.fiveknowacan.activity.DeviceDetialActivity;
 import com.example.fiveknowacan.base.BaseDeviceDetialPager;
 import com.example.fiveknowacan.bean.DeviceBean;
 
 import java.util.ArrayList;
 
 /**
- * 全部设备详情页
+ * 全部设备列表页
  *
  * @author cao
  * @date 2019-8-20
  */
-class AllDeviceDetailPager extends BaseDeviceDetialPager {
+class AllDeviceListPager extends BaseDeviceDetialPager {
 
     private ArrayList<DeviceBean> m_Device = new ArrayList<>();
     ListView m_lvDeviceList;
     DeviceAdapter m_Adapter;
 
-    public AllDeviceDetailPager(Activity mActivity) {
+    public AllDeviceListPager(Activity mActivity) {
         super(mActivity);
     }
 
@@ -44,7 +43,7 @@ class AllDeviceDetailPager extends BaseDeviceDetialPager {
         m_lvDeviceList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                mActivity.startActivity(new Intent(mActivity, DeviceActivity.class));
+                mActivity.startActivity(new Intent(mActivity, DeviceDetialActivity.class));
 
             }
         });

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.DeviceActivity">
+    tools:context=".activity.DeviceDetialActivity">
     <ScrollView
         android:id="@+id/sv_container"
         android:layout_width="match_parent"
@@ -168,7 +168,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btn_exit"
+                android:id="@+id/btn_playvideo"
                 android:layout_below="@+id/ll_modelofuse"
                 android:layout_marginTop="@dimen/dp_30"
                 android:layout_width="fill_parent"

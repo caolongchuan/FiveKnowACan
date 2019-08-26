@@ -1,9 +1,11 @@
 package com.example.fiveknowacan.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ScrollView;
@@ -14,17 +16,28 @@ import com.example.fiveknowacan.base.BaseActivity;
 
 import java.util.ArrayList;
 
-public class DeviceActivity extends BaseActivity {
+public class DeviceDetialActivity extends BaseActivity {
 
     ScrollView mContainer;
     ListView mVadioList;
     ArrayList<String> vadio = new ArrayList<>();
+    Button mPlayVideo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_device);
         tvTitle.setText("设备详情页");
+        initEvent();
+    }
+
+    private void initEvent() {
+        mPlayVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DeviceDetialActivity.this,PlayVideoActivity.class));
+            }
+        });
     }
 
     @Override
@@ -32,6 +45,7 @@ public class DeviceActivity extends BaseActivity {
         View view = View.inflate(this, R.layout.activity_device, null);
         mContainer = view.findViewById(R.id.sv_container);
         mVadioList = view.findViewById(R.id.lv_vadiolist);
+        mPlayVideo = view.findViewById(R.id.btn_playvideo);
         flContent.addView(view);
 
         for (int i = 0; i < 10; i++) {
@@ -63,15 +77,15 @@ public class DeviceActivity extends BaseActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            DeviceActivity.ViewHolder holder;
+            DeviceDetialActivity.ViewHolder holder;
             if (view == null) {
-                view = View.inflate(DeviceActivity.this, R.layout.list_device_video,
+                view = View.inflate(DeviceDetialActivity.this, R.layout.list_device_video,
                         null);
-                holder = new DeviceActivity.ViewHolder();
-                holder.tvVideo = (TextView) view.findViewById(R.id.tv_video);
+                holder = new DeviceDetialActivity.ViewHolder();
+                holder.tvVideo = view.findViewById(R.id.tv_video);
                 view.setTag(holder);
             } else {
-                holder = (DeviceActivity.ViewHolder) view.getTag();
+                holder = (DeviceDetialActivity.ViewHolder) view.getTag();
             }
 
             String b = (String) getItem(i);

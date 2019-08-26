@@ -1,15 +1,9 @@
 package com.example.fiveknowacan.page;
 
-import android.Manifest;
 import android.app.Activity;
-import android.app.Instrumentation;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.view.View;
 import android.widget.Toast;
-
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import com.example.fiveknowacan.activity.MainActivity;
 import com.example.fiveknowacan.activity.StartScanActivity;
@@ -18,7 +12,6 @@ import com.example.fiveknowacan.base.BasePager;
 import com.example.fiveknowacan.bean.DeviceClassifiBean;
 import com.example.fiveknowacan.fragment.LeftMenuFragment;
 import com.example.fiveknowacan.global.GlobalConstants;
-import com.example.fiveknowacan.zxing.android.CaptureActivity;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
@@ -98,7 +91,7 @@ public class DevicePager extends BasePager {
 
         // 初始化1个设备列表详情页
         mDeviceDetailPagers = new ArrayList<BaseDeviceDetialPager>();
-        mDeviceDetailPagers.add(new AllDeviceDetailPager(mActivity));
+        mDeviceDetailPagers.add(new AllDeviceListPager(mActivity));
         // 将新闻菜单详情页设置为默认页面
         setCurrentDetailPager(0);
 

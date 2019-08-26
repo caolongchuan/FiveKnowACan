@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fiveknowacan">
-
-    <!--扫描需要的权限-->
+    <!-- 扫描需要的权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
-
-
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -28,8 +25,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.StartScanActivity"></activity>
-        <activity android:name=".activity.DeviceActivity" />
+        <activity
+            android:name=".activity.PlayVideoActivity"
+            android:screenOrientation="sensor"></activity>
+        <activity android:name=".activity.StartScanActivity" />
+        <activity android:name=".activity.DeviceDetialActivity" />
         <activity android:name=".base.BaseActivity" />
         <activity android:name=".activity.AboutUsActivity" />
         <activity android:name=".activity.ChangePasswordActivity" />
@@ -50,7 +50,7 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".zxing.android.CaptureActivity"></activity>
+        <activity android:name=".zxing.android.CaptureActivity" />
     </application>
 
 </manifest>
